@@ -1,7 +1,7 @@
 {
   "name": "annapurna-veneer-backend",
   "version": "1.0.0",
-  "description": "Backend API for Om Veneer Udhyog website",
+  "description": "Backend API for Om Laminates website",
   "main": "server.js",
   "type": "commonjs",
   "scripts": {
