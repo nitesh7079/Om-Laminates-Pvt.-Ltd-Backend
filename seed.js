@@ -48,8 +48,8 @@ const seed = async () => {
     await Company.deleteMany();
     const defaultCompany = await Company.create({
       name: "Om Laminates",
-      email: "info@omveneer.com",
-      phone: "+977-1234567890",
+      email: "niteshrajkumar66@gmail.com",
+      phone: "+977-9816968393",
       address: {
         street: "Birtamod",
         city: "Jhapa",
