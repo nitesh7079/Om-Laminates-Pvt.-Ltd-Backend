@@ -103,7 +103,7 @@ const seedDefaultData = async () => {
     if (!defaultCompany) {
       defaultCompany = await Company.create({
         name: "Om Laminates",
-        email: "niteshrajkumar66@gmail.com",
+        email: "ronak.ag583@gmail.com",
         phone: "+977-9816968393",
         address: {
           street: "Birtamod",
