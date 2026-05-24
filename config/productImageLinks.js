@@ -8,7 +8,7 @@ const productImageLinks = {
   "2mm Fali": "https://res.cloudinary.com/ddpcospqm/image/upload/v1779616259/om_veneer/core/IMG_6691.jpg",
   "2.4mm Core": "https://res.cloudinary.com/ddpcospqm/image/upload/v1779616260/om_veneer/core/IMG_6692.jpg",
   "2.4mm Fali": "https://res.cloudinary.com/ddpcospqm/image/upload/v1779616262/om_veneer/core/IMG_6693.jpg",
-  "Half Cut 8 Inch": "https://res.cloudinary.com/ddpcospqm/image/upload/v1779616263/om_veneer/core/IMG_6694.jpg",
+  "Half Cut 8 Inch": "/half-cut-8-inch.jpg",
 };
 
 module.exports = productImageLinks;
