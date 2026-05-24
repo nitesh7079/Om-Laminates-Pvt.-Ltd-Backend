@@ -64,6 +64,35 @@ const PORT = process.env.PORT || 5000;
 const seedDefaultData = async () => {
   const User = require("./models/User");
   const Company = require("./models/Company");
+  const Product = require("./models/Product");
+  const productImageLinks = require("./config/productImageLinks");
+
+  try {
+    console.log("Syncing product images to Cloudinary links...");
+    await Product.deleteOne({ name: "Door Board Ply" });
+    
+    const products = await Product.find({});
+    for (let product of products) {
+      if (productImageLinks[product.name]) {
+        product.image = productImageLinks[product.name];
+        await product.save();
+      }
+    }
+
+    const existingNames = products.map(p => p.name);
+    for (const [name, link] of Object.entries(productImageLinks)) {
+      if (!existingNames.includes(name) && name !== "Door Board Ply") {
+        await Product.create({
+          name: name,
+          description: `Premium quality ${name}.`,
+          image: link
+        });
+      }
+    }
+    console.log("Product sync complete.");
+  } catch (error) {
+    console.error("Product sync error:", error);
+  }
 
   const adminExists = await User.findOne({ username: "admin" });
   if (!adminExists) {
